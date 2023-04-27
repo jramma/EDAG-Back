@@ -2,11 +2,11 @@
 FROM maven:3.8.4-openjdk-17-slim AS build
 
 # Copia los archivos fuente y pom.xml a la imagen
-COPY src /home/app/src
-COPY pom.xml /home/app
+COPY src /src
+COPY pom.xml /.
 
 # Configura el directorio de trabajo en la imagen
-WORKDIR /home/app
+WORKDIR /src/main/java/com.joBarcelona.edag
 
 # Ejecuta el comando Maven para compilar y empaquetar la aplicación
 RUN mvn -B -DskipTests clean package

@@ -13,11 +13,11 @@ import org.bson.Document;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Team5Application {
+public class App {
 
 	public static void main(String[] args) {
 		createConnection();
-		SpringApplication.run(Team5Application.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 	private static void createConnection() {
