@@ -4,9 +4,7 @@ package com.joBarcelona.edag.controller;
 import java.util.List;
 
 import com.joBarcelona.edag.model.domain.*;
-import com.joBarcelona.edag.model.service.MarketService;
-import com.joBarcelona.edag.security.domain.Usuario;
-import com.joBarcelona.edag.security.service.UserService;
+import com.joBarcelona.edag.model.service.FootballService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,29 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@Autowired
-    MarketService marketService;
-
-	@Autowired
-    UserService userService;
+	FootballService service;
 
 
-	@GetMapping("/")
-	public AllTeam getClientes() {
 
-		return "¡Bienvenida!";
+	@GetMapping("/teams")
+	public List<AllTeam> getAllSquads() {
+
+		return service.getAllSquads();
 	}
-	@GetMapping("/team")
-	public Team getPlayers(){
-		return
+
+	@GetMapping("/teamData")
+	public List<TeamInfo> getTeamData() {
+
+		return service.getTeamData();
 	}
-	@GetMapping("/player")
-	public Player getMatches(){
-			return
-		}
-	@GetMapping("/teams"){
-		public List<Team> geTeams(){
-			return
-		}
-	
 	
 }
