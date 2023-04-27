@@ -18,7 +18,7 @@ FROM openjdk:17-jdk-slim
 COPY --from=build /home/app/target/my-api.jar /usr/local/lib/my-api.jar
 
 # Expone el puerto que utiliza la API
-EXPOSE 8080
+EXPOSE 9006
 
 # Define el comando que se ejecutará cuando el contenedor se inicie
 CMD ["java", "-jar", "/usr/local/lib/my-api.jar"]
