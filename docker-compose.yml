@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  my-api:
+    build: .
+    ports:
+      - "9006:9006"
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb+srv://user:#hK*Gr4#XdEFhjd@cluster0.fuei3t3.mongodb.net/my-database?retryWrites=true&w=majority
