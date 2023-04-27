@@ -12,12 +12,3 @@ services:
       SPRING_DATA_MONGODB_DATABASE: Edag
     depends_on:
       - mongo
-  mongo:
-    image:  mongo:4.4.6
-    restart: always
-    volumes:
-      - mongo-data:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: user
-      MONGO_INITDB_ROOT_PASSWORD: #hK*Gr4#XdEFhjd
-

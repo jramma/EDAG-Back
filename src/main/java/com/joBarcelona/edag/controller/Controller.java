@@ -28,7 +28,7 @@ public class Controller {
 
 		return service.getTeamData();
 	}
-	@GetMapping("/player")
+	@GetMapping("/players")
 	public List<Player> getPlayers() {
 
 		return service.getPlayer();
