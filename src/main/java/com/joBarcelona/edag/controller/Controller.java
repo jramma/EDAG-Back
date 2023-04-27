@@ -1,6 +1,7 @@
 package com.joBarcelona.edag.controller;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.joBarcelona.edag.model.domain.*;
@@ -16,9 +17,6 @@ public class Controller {
 
 	@Autowired
 	FootballService service;
-
-
-
 	@GetMapping("/teams")
 	public List<AllTeam> getAllSquads() {
 
@@ -31,9 +29,11 @@ public class Controller {
 		return service.getTeamData();
 	}
 	@GetMapping("/player")
-	public List<Player> getPlayer() {
+	public List<Player> getPlayers() {
 
 		return service.getPlayer();
 	}
-	
+
+
+
 }

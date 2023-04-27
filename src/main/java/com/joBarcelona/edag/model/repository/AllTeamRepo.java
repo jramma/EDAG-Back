@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface AllTeamRepo extends MongoRepository<AllTeam,String> {
     @Query("{ }")
-    List<String> findAllByUrl_Imagen();
+    AllTeam findBySquad_id(String squad_id);
 }

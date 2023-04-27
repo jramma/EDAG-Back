@@ -9,6 +9,7 @@ import com.joBarcelona.edag.model.repository.PlayerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.constant.Constable;
 import java.util.List;
 
 @Service
@@ -29,8 +30,15 @@ public class FootballService {
         return allTeam1.findAll();
     }
     public List<Player> getPlayer() {
-
         return repo.findAll();
     }
+
+    public String getName(String id){
+        AllTeam team = allTeamRepo.findBySquad_id(id);
+        return team.getSquad();
+    }
+
+
+
 
 }
