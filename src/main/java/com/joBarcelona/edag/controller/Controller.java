@@ -30,5 +30,10 @@ public class Controller {
 
 		return service.getTeamData();
 	}
+	@GetMapping("/player")
+	public List<Player> getPlayer() {
+
+		return service.getPlayer();
+	}
 	
 }
